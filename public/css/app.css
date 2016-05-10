@@ -1,0 +1,194 @@
+body {
+	background-color: #e9eaed;
+}
+
+button:hover {
+	border: none !important;
+}
+
+.app-bar {
+	padding-left: 50px;
+	padding-right: 50px;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+}
+
+.bar-logo {
+	flex: 1;
+}
+
+.logo {
+	display: inline-flex !important;
+	align-items: center;
+}
+
+.logo-img {
+	max-width: 42px !important;
+	max-height: 42px !important;
+}
+
+.logo-name {
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Bitter;
+}
+
+.notHover:hover {
+	transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.d-menu {
+	border: none !important;
+}
+
+.app-element > .d-menu > li > a {
+	color: #333333 !important;
+	font-size: 16px;
+}
+
+.app-element > .d-menu > li > a:hover {
+	background-color: #59cde2;
+}
+
+.menu-bar, .app-content {
+	margin-top: 20px;
+}
+
+.menu-bar a, .app-content a {
+	color: #333333 !important;
+}
+
+.menu-bar > ul > li {
+	background-color: #e9eaed;
+}
+
+.menu-bar > ul > li > a {
+	font-size: 16px;
+}
+
+.menu-bar > ul > li > a > img {
+	padding-right: 30px !important;
+}
+
+.menu-button {
+	padding-left: 20px;
+}
+
+.actived {
+	font-weight: bold;
+}
+
+.button-list {
+	font-size: 25px !important;
+	font-weight: 400;
+	color: #ffffff;
+	position: absolute;
+	right: 20px;
+	top: -25px;
+}
+
+.button-list > button {
+	font-size: 25px !important;
+}
+
+.button-list button {
+	color: #ffffff;
+}
+
+.button-list > button:hover, .button-list > a:hover, .tranButton:hover {
+	transform: rotate(360deg);
+	transition-duration: 1.5s;
+}
+
+.categories-list {
+	
+	margin-top: 15px;
+	position: relative;
+}
+
+.type-title {
+	font-size: 16px;
+	padding: 8px;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	margin-left: 8px;
+	margin-right: 9px;
+	margin-top: 15px;
+	color: #999999;
+}
+
+.list:not(:hover) {
+	border-bottom-color: #ffffff !important;
+}
+
+.list {
+	display: inline-flex !important;
+	align-items: center;
+	padding-bottom: 8px !important;
+}
+
+.list-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.add-new-category > .grid {
+	margin: 0 !important;
+}
+
+.add-new-category button {
+	background-color: #26a69a;
+}
+
+.add-new-category button:hover {
+	background-color: #26a69a;
+}
+
+.categories-list button:focus {
+	color: white;
+}
+
+.cat_img {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+.deleteBut {
+	align-self: center;
+}
+
+.deleteBut:hover {
+}
+
+.app-notify {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin-left: 30px;
+	box-shadow: 1px 0 0 #f0f0f2 inset;
+	border-left: 1px solid #ccc;
+	padding: 10px;
+}
+
+.notify-title {
+}
+
+.sorry {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sorry img {
+	margin-right: 20px;
+}
+
+.list, .transactionListThisMonth {
+	opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+}

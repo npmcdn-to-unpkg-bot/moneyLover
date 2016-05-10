@@ -1,0 +1,135 @@
+.wallet-content {
+	background-color: #ffffff;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	position: relative;
+	padding: 0 20px 30px 20px;
+}
+
+.wallet-list {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 0;
+	box-sizing: border-box;
+
+}
+
+.wallet_i {
+	border-right: 1px solid #ccc;
+}
+
+.wallet_i:hover .wallet-icon, .wallet_i:hover .wallet-name{
+	font-weight: bold;
+	color: #16499a;
+	transform: scale(1.1);
+}
+
+.wallet-icon {
+	max-width: 40px;
+}
+
+.walletNow {
+	font-weight: bold;
+	color: #16499a;
+}
+
+.wallet-info {
+	margin-left: 20px;
+}
+
+.wallet-name-dd {
+	color: #ffffff;
+	margin-left: 10px;
+}
+
+.dropdown-menu {
+	margin: 0 !important;
+	width: 100% !important;
+	margin-top: 10px !important;
+}
+
+.wallet-dropdown {
+	position: relative;
+}
+
+.monthSelect {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.monthSelect button {
+	background-color: #ffffff;
+}
+
+.month, .previous, .next {
+	font-size: 26px;
+	color: #ee6e73;
+}
+
+.arrow {
+	max-width: 30px;
+	max-height: 30px;
+}
+
+.transactionListThisMonth {
+	margin-top: 10px;
+	background-color: #ffffff;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	position: relative;
+	padding: 20px;
+	width: 49.5% !important;
+}
+
+.date-title {
+	font-size: 16px;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	color: #999999;
+	padding-bottom: 10px;
+}
+
+.date-title, .tranContent {
+	width: 100% !important;
+}
+
+.iTransaction {
+	display: flex;
+	width: 100%;
+}
+
+.total-transaction {
+	color: red;
+	display: flex;
+	align-items: center;
+}
+
+.transactionDetails {
+	margin-top: 10px;
+}
+
+.tran-icon {
+	max-width: 60px;
+	max-height: 60px;
+}
+
+.tranlist {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.sorry {
+	margin-top: 20px;
+}
+
+.tranButton {
+	position: absolute;
+	bottom: -25px;
+	right: 0;
+	z-index: 9;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

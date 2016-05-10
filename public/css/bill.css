@@ -1,0 +1,104 @@
+.app-content {
+	margin-right: 20px !important;
+}
+
+.bill-content {
+	background-color: #ffffff;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	position: relative;
+}
+
+.bill-button button {
+	color: #ffffff;
+	font-size: 25px !important;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.bill-button button:hover {
+	transform: scale(1.05);
+	transform: rotate(360deg);
+	transition-duration: 1.5s;
+}
+
+.newBillBut {
+	position: absolute;
+	right: -25px;
+	top: 20px;
+}
+
+.list-content {
+	padding: 20px;
+	padding-left: 10px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.newBillContent > .row {
+	display: flex;
+	justify-content: center;
+}
+
+.newBillContent  .input-control {
+	width: 100%;
+}
+
+.totalPayInput {
+	font-size: 16px !important;
+	text-align: right !important;
+}
+
+.billCurrency {
+	display: flex;
+}
+
+select, select:hover, select:focus, select:active  {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important; 
+}
+
+.datePicker input {
+	border: none !important;
+	border-bottom: 2px #DDDDDD solid !important;
+}
+
+.listview {
+	padding-bottom: 20px;
+}
+
+.tile-wide, .tile-wide a {
+	color: #ffffff !important;
+}
+
+.title-content {
+	padding: 10px;
+}
+
+.billName {
+	margin-bottom: 30px;
+}
+
+.billTotalPay, .billDeadline {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.deleteButton {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.datepickBut {
+	top: 10px !important;
+}
+
+ .tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+        }

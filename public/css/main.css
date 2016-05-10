@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Bitter;
+    src: url(../font/Bitter/Bitter-Regular.ttf);
+}
+
+html {
+	font-family: "Roboto", "Segoe UI", "Open Sans", "sans-serif", "serif" !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button {
+	box-shadow: none !important;
+	border: none !important;
+}
+
+a {
+	border-radius: 0 !important;
+	outline: 0 !important;
+	color: #ffffff !important;
+}
+
+.Error {
+	color: red;
+}
+
+
+
+
+
