@@ -9,6 +9,7 @@
 	<link href="{{url('/MetroUI/css/docs.css')}}" rel="stylesheet">
 	<link href="{{url('/css/main.css')}}" rel="stylesheet">
 	<link href="{{url('/css/app.css')}}" rel="stylesheet">
+	<link href="{{url('/css/categories.css')}}" rel="stylesheet">
 	<script type="text/javascript" src="{{url('/MetroUI/js/jquery.js')}}"></script>
 	<script type="text/javascript" src="{{url('/MetroUI/js/metro.js')}}"></script>
 	<script type="text/javascript" src="{{url('/MetroUI/js/docs.js')}}"></script>
@@ -24,7 +25,7 @@
 	?>
 	<script type="text/javascript">
 		$(function(){
-            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super, .list, .transactionListThisMonth");
+            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super, .list, .transactionListThisMonth, .icon");
             $.each(tiles, function(){
                 var tile = $(this);
                 setTimeout(function(){
@@ -79,31 +80,31 @@
 			    	<ul class="v-menu subdown">
 					    <li>
 					    	<a href="{{url('/wallets')}}" class="{{$state[0]}}">
-					    		<img src="{{url('/icon/check_book.png')}}">
+					    		<img src="{{url('/icon/12.png')}}">
 					    		<span class="menu-button">Sổ giao dịch</span>
 					    	</a>
 					    </li>
 					    <li>
 					    	<a href="{{route('bill.index')}}" class="{{$state[1]}}">
-					    		<img src="{{url('/icon/Purchase Order-96.png')}}">
+					    		<img src="{{url('/icon/53.png')}}">
 					    		<span class="menu-button">Hóa đơn</span>
 					    	</a>
 					    </li>
 					    <li>
 					    	<a href="#" class="{{$state[2]}}">
-					    		<img src="{{url('/icon/Class-96.png')}}">
+					    		<img src="{{url('/icon/14.png')}}">
 					    		<span class="menu-button">Thống kê</span>
 					    	</a>
 					    </li>
 					    <li>
 					    	<a href="{{url('/categories')}}" class="{{$state[3]}}">
-					    		<img src="{{url('/icon/Timeline.png')}}">
+					    		<img src="{{url('/icon/19.png')}}">
 					    		<span class="menu-button">Nhóm</span>
 					    	</a>
 					    </li>
 					    <li>
 					    	<a href="#" class="{{$state[4]}}">
-					    		<img src="{{url('/icon/Support-96.png')}}">
+					    		<img src="{{url('/icon/63.png')}}">
 					    		<span class="menu-button">Cài đặt</span>
 					    	</a>
 					    </li>

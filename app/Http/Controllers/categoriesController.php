@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Categories;
 use Auth;
+use App\Icon;
 
 class categoriesController extends Controller
 {
@@ -16,7 +17,8 @@ class categoriesController extends Controller
 
 	public function Index() {
 		$categories = Categories::getAll();
-		return view('app.categories', compact('categories'));
+		$icons = Icon::getAll();
+		return view('app.categories', compact('categories', 'icons'));
 	}
 
 	public function createNew(Request $request) {
@@ -33,7 +35,8 @@ class categoriesController extends Controller
 
 	public function showCategory($id) {
 		$cat = Categories::getById($id);
-		return view('app.showDetail', compact('cat'));
+		$icons = Icon::getAll();
+		return view('app.showDetail', compact('cat', 'icons'));
 	}
 
 	public function update($id, Request $request) {

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2016 at 11:57 PM
+-- Generation Time: May 12, 2016 at 12:25 AM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- PHP Version: 5.5.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -65,25 +65,25 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `user_id`, `type`, `name`, `icon`, `updated_at`, `created_at`) VALUES
-(1063, 13, '1', 'Thưởng', 'Packaging-96.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1064, 13, '1', 'Tiền lãi', 'Discount-96.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1065, 13, '1', 'Lương', 'Banknotes-96.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1066, 13, '1', 'Đươc tặng', 'Refund-96.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1067, 13, '1', 'Bán đồ', 'land_sales.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1068, 13, '1', 'Khoản thu khác', 'Money Transfer-80.png', '2016-05-08 23:20:11', '2016-05-08 23:20:11'),
-(1069, 13, '2', 'Ăn uống', 'food.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1070, 13, '2', 'Di chuyển', 'Ground Transportation-96.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1071, 13, '2', 'Mua sắm', 'Buy-96.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1072, 13, '2', 'Yêu & Bạn bè', 'date.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1073, 13, '2', 'Giải trí', 'cards.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1074, 13, '2', 'Du lịch', 'Airport-96.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1075, 13, '2', 'Sức khỏe', 'health_book.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1076, 13, '2', 'Tặng quà', 'donate.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1077, 13, '2', 'Gia đình', 'family.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1078, 13, '2', 'Giáo dục', 'student.png', '2016-05-08 23:20:12', '2016-05-08 23:20:12'),
-(1079, 13, '2', 'Đầu tư', 'handle_with_care.png', '2016-05-08 23:20:13', '2016-05-08 23:20:13'),
-(1080, 13, '2', 'Bảo hiểm', 'heart_health.png', '2016-05-08 23:20:13', '2016-05-08 23:20:13'),
-(1081, 13, '2', 'Khoản chi khác', 'Money Bag-96.png', '2016-05-08 23:20:13', '2016-05-08 23:20:13');
+(1163, 4, '1', 'Thưởng', '44.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1164, 4, '1', 'Tiền lãi', '22.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1165, 4, '1', 'Lương', '4.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1166, 4, '1', 'Đươc tặng', '48.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1167, 4, '1', 'Bán đồ', '56.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1168, 4, '1', 'Khoản thu khác', '16.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1169, 4, '2', 'Ăn uống', '27.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1170, 4, '2', 'Di chuyển', '30.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1171, 4, '2', 'Mua sắm', '6.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1172, 4, '2', 'Yêu & Bạn bè', '20.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1173, 4, '2', 'Giải trí', '10.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1174, 4, '2', 'Du lịch', '1.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1175, 4, '2', 'Sức khỏe', '33.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1176, 4, '2', 'Tặng quà', '73.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1177, 4, '2', 'Gia đình', '26.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1178, 4, '2', 'Giáo dục', '62.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1179, 4, '2', 'Đầu tư', '32.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1180, 4, '2', 'Bảo hiểm', '34.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33'),
+(1181, 4, '2', 'Khoản chi khác', '74.png', '2016-05-11 15:22:33', '2016-05-11 15:22:33');
 
 -- --------------------------------------------------------
 
@@ -103,25 +103,25 @@ CREATE TABLE `default_categories` (
 --
 
 INSERT INTO `default_categories` (`id`, `type`, `name`, `icon`) VALUES
-(1, '1', 'Thưởng', 'Packaging-96.png'),
-(2, '1', 'Tiền lãi', 'Discount-96.png'),
-(3, '1', 'Lương', 'Banknotes-96.png'),
-(4, '1', 'Đươc tặng', 'Refund-96.png'),
-(5, '1', 'Bán đồ', 'land_sales.png'),
-(6, '1', 'Khoản thu khác', 'Money Transfer-80.png'),
-(7, '2', 'Ăn uống', 'food.png'),
-(8, '2', 'Di chuyển', 'Ground Transportation-96.png'),
-(9, '2', 'Mua sắm', 'Buy-96.png'),
-(10, '2', 'Yêu & Bạn bè', 'date.png'),
-(11, '2', 'Giải trí', 'cards.png'),
-(12, '2', 'Du lịch', 'Airport-96.png'),
-(13, '2', 'Sức khỏe', 'health_book.png'),
-(14, '2', 'Tặng quà', 'donate.png'),
-(15, '2', 'Gia đình', 'family.png'),
-(16, '2', 'Giáo dục', 'student.png'),
-(17, '2', 'Đầu tư', 'handle_with_care.png'),
-(18, '2', 'Bảo hiểm', 'heart_health.png'),
-(19, '2', 'Khoản chi khác', 'Money Bag-96.png');
+(1, '1', 'Thưởng', '44.png'),
+(2, '1', 'Tiền lãi', '22.png'),
+(3, '1', 'Lương', '4.png'),
+(4, '1', 'Đươc tặng', '48.png'),
+(5, '1', 'Bán đồ', '56.png'),
+(6, '1', 'Khoản thu khác', '16.png'),
+(7, '2', 'Ăn uống', '27.png'),
+(8, '2', 'Di chuyển', '30.png'),
+(9, '2', 'Mua sắm', '6.png'),
+(10, '2', 'Yêu & Bạn bè', '20.png'),
+(11, '2', 'Giải trí', '10.png'),
+(12, '2', 'Du lịch', '1.png'),
+(13, '2', 'Sức khỏe', '33.png'),
+(14, '2', 'Tặng quà', '73.png'),
+(15, '2', 'Gia đình', '26.png'),
+(16, '2', 'Giáo dục', '62.png'),
+(17, '2', 'Đầu tư', '32.png'),
+(18, '2', 'Bảo hiểm', '34.png'),
+(19, '2', 'Khoản chi khác', '74.png');
 
 -- --------------------------------------------------------
 
@@ -146,6 +146,99 @@ INSERT INTO `default_wallets` (`id`, `name`, `icon`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `icons`
+--
+
+CREATE TABLE `icons` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `iconName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `icons`
+--
+
+INSERT INTO `icons` (`id`, `iconName`, `created_at`, `updated_at`) VALUES
+(1, '1.png', NULL, NULL),
+(2, '2.png', NULL, NULL),
+(3, '3.png', NULL, NULL),
+(4, '4.png', NULL, NULL),
+(5, '5.png', NULL, NULL),
+(6, '6.png', NULL, NULL),
+(7, '7.png', NULL, NULL),
+(8, '8.png', NULL, NULL),
+(9, '9.png', NULL, NULL),
+(10, '10.png', NULL, NULL),
+(11, '11.png', NULL, NULL),
+(12, '12.png', NULL, NULL),
+(13, '13.png', NULL, NULL),
+(14, '14.png', NULL, NULL),
+(15, '15.png', NULL, NULL),
+(16, '16.png', NULL, NULL),
+(17, '17.png', NULL, NULL),
+(18, '18.png', NULL, NULL),
+(19, '19.png', NULL, NULL),
+(20, '20.png', NULL, NULL),
+(21, '21.png', NULL, NULL),
+(22, '22.png', NULL, NULL),
+(23, '23.png', NULL, NULL),
+(24, '24.png', NULL, NULL),
+(25, '25.png', NULL, NULL),
+(26, '26.png', NULL, NULL),
+(27, '27.png', NULL, NULL),
+(28, '28.png', NULL, NULL),
+(29, '29.png', NULL, NULL),
+(30, '30.png', NULL, NULL),
+(31, '31.png', NULL, NULL),
+(32, '32.png', NULL, NULL),
+(33, '33.png', NULL, NULL),
+(34, '34.png', NULL, NULL),
+(35, '35.png', NULL, NULL),
+(36, '36.png', NULL, NULL),
+(37, '37.png', NULL, NULL),
+(38, '38.png', NULL, NULL),
+(39, '39.png', NULL, NULL),
+(40, '40.png', NULL, NULL),
+(41, '41.png', NULL, NULL),
+(42, '42.png', NULL, '0000-00-00 00:00:00'),
+(43, '43.png', NULL, NULL),
+(44, '44.png', NULL, NULL),
+(45, '45.png', NULL, NULL),
+(46, '46.png', NULL, NULL),
+(47, '47.png', NULL, NULL),
+(48, '48.png', NULL, NULL),
+(49, '49.png', NULL, NULL),
+(50, '50.png', NULL, NULL),
+(51, '51.png', NULL, NULL),
+(52, '52.png', NULL, NULL),
+(53, '53.png', NULL, NULL),
+(54, '54.png', NULL, NULL),
+(55, '55.png', NULL, NULL),
+(56, '56.png', NULL, NULL),
+(57, '57.png', NULL, NULL),
+(58, '58.png', NULL, NULL),
+(59, '59.png', NULL, NULL),
+(60, '60.png', NULL, NULL),
+(61, '61.png', NULL, NULL),
+(62, '62.png', NULL, NULL),
+(63, '63.png', NULL, NULL),
+(64, '64.png', NULL, NULL),
+(65, '65.png', NULL, NULL),
+(66, '66.png', NULL, NULL),
+(67, '67.png', NULL, NULL),
+(68, '68.png', NULL, NULL),
+(69, '69.png', NULL, NULL),
+(70, '70.png', NULL, NULL),
+(71, '71.png', NULL, NULL),
+(72, '72.png', NULL, NULL),
+(73, '73.png', NULL, NULL),
+(74, '74.png', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -164,7 +257,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_05_02_015717_create_bills_table', 2),
 ('2016_05_09_054812_create_wallets_table', 3),
 ('2016_05_09_060527_create_wallet_table', 4),
-('2016_05_09_100806_create_transaction_table', 5);
+('2016_05_09_100806_create_transaction_table', 5),
+('2016_05_11_185818_create_icon', 6);
 
 -- --------------------------------------------------------
 
@@ -295,6 +389,12 @@ ALTER TABLE `default_wallets`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `icons`
+--
+ALTER TABLE `icons`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -333,7 +433,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1082;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1182;
 --
 -- AUTO_INCREMENT for table `default_categories`
 --
@@ -344,6 +444,11 @@ ALTER TABLE `default_categories`
 --
 ALTER TABLE `default_wallets`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `icons`
+--
+ALTER TABLE `icons`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `transactions`
 --

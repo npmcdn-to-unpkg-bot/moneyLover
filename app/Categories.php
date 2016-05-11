@@ -30,7 +30,7 @@ class Categories extends Model
 		$newCat = new Categories;
 		$newCat->type = $request->type;
 		$newCat->name = $request->category;
-		$newCat->icon = "image_file1.png";
+		$newCat->icon = $request->icon;
 		$newCat->user_id = $user_id;
 		$newCat->save();
 		return;
@@ -44,7 +44,7 @@ class Categories extends Model
 		$Cat = Categories::find($id);
 		$Cat->type = $request->type;
 		$Cat->name = $request->category;
-		//$Cat->icon = "image_file1.png";
+		$Cat->icon = $request->icon;
 		$Cat->save();
 		return;	
 	}

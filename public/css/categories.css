@@ -1,0 +1,37 @@
+.choose-icon {
+	z-index: 9999;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.icon-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #eeeeee;
+	padding: 20px;
+}
+
+.icon-list:after {
+  content: "";
+  flex: auto;
+}
+
+.icon {
+	padding: 5px;
+	border: none;
+	box-shadow: none;
+}
+
+.choose-icon-title {
+	padding: 10px;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.close {
+	color: #ffffff;
+}

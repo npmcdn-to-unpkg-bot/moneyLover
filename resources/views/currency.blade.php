@@ -20,7 +20,7 @@
 				{{Auth::user()->name.trans('currency.comment')}}
 			</div>
 			<div class="valign-wrapper select-sex">
-				<img src="{{url('/icon/User-Male.png')}}">
+				<img src="{{url('/icon/68.png')}}">
 				<div class="switch">
 				    <label>
 				      {{trans('currency.male')}}
@@ -29,7 +29,7 @@
 				      {{trans('currency.female')}}
 				    </label>
 				</div>
-				<img src="{{url('/icon/User-Female.png')}}">
+				<img src="{{url('/icon/67.png')}}">
 			</div>
 			<div class="comment">
 				{{trans('currency.currency')}}

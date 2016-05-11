@@ -14,14 +14,14 @@
 	<div class="categories-list">
 		{{--Add new category--}}
 		<div class="row button-list" style="padding-bottom: 20px;">
-			<button class="button cycle-button large-button primary" onclick="showDialog('#dialog')" style="margin-right: 20px;">+</button>
+			<button class="button cycle-button large-button primary add-button" onclick="showDialog('#dialog')" style="margin-right: 20px;">+</button>
 			<a href="{{url('/categories/reset')}}">
 				<button class="button cycle-button large-button" style="background-color: #F44336">
 					<span class="mif-spinner4"></span>
 				</button>
 			</a>
 		</div>
-		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="30%" class="add-new-category">
+		<div data-role="dialog" id="dialog" data-overlay="true" data-overlay-color="op-dark" data-close-button="true" class="add-new-category" data-width="30%">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -31,8 +31,9 @@
 				    	<form method="post" action="{{url('categories/add-new-category')}}">
 				    		{{ csrf_field() }}
 					    	<div class="row" style="justify-content: center;">
-					    		<div class="cell colspan3 cat_img">
-					    			<img src="{{url('/icon/image_file1.png')}}">
+					    		<div class="cell colspan3 cat_img choose_categories">
+					    			<img src="{{url('/icon/Questions.png')}}" class="category-icon">
+					    			<input type="hidden" name="icon" value="Questions.png" class="iconInput">
 					    		</div>
 					    		<div class="cell colspan1"></div>
 					    		<div class="cell colspan8">
@@ -64,6 +65,51 @@
 				    </div>
 				</div>
 		    </div>
+		    	<div class="choose-icon">
+					<div class="row" style="background-color: #26a69a; padding-left: 20px; padding-right: 20px; align-items: center; width: 100%; justify-content: space-between;">
+						<div class="choose-icon-title">Chọn biểu tượng</div>
+						<button class="close"><span class="mif-backward"></span></button>
+					</div>
+					<div class="icon-list">
+				    	@foreach ($icons as $icon)
+				    		<div class="tile-small icon" data-role="title" onclick="choose_img('{{$icon->iconName}}')">
+								<img src="{{url('icon/'.$icon->iconName)}}">
+							</div>
+				    	@endforeach
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(".choose-icon").hide();
+					$(".dialog-close-button").show();
+					$(".choose-icon").hide();
+
+					$(".add-button").click(function() {
+						$(".choose-icon").hide();
+						$(".panel").show();
+						$(".dialog-close-button").show();
+					});
+
+					$(".choose_categories").click(function() {
+						$(".choose-icon").show();
+						$(".panel").hide();
+						$(".dialog-close-button").hide();
+					});
+
+					function choose_img(icon) {
+						$(".choose-icon").hide();
+						$(".panel").show();
+						$(".dialog-close-button").show();
+						var link = "{{url('icon')}}" + "/" + icon;
+						$(".category-icon").attr("src", link);
+						$(".iconInput").attr("value", icon);
+					};
+
+					$(".close").click(function() {
+						$(".choose-icon").hide();
+						$(".panel").show();
+						$(".dialog-close-button").show();
+					});
+				</script>
 		</div>
 		{{--List categories--}}
 		@if (count($categories) == 0) 
@@ -81,7 +127,7 @@
 						        <img src="{{url('/icon/'.$cat->icon)}}" class="list-icon">
 						        <span class="list-title">{{$cat->name}}</span>
 						    </div>
-						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
+						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
 					    @endif
 					@endforeach
 				</div>
@@ -95,7 +141,7 @@
 						        <img src="{{url('/icon/'.$cat->icon)}}" class="list-icon">
 						        <span class="list-title">{{$cat->name}}</span>
 						    </div>
-						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
+						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
 					    @endif
 					@endforeach
 				</div>
