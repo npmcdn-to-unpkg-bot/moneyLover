@@ -142,3 +142,7 @@
 .datepickBut {
 	top: 8px !important;
 }
+
+.select2-container {
+	width: 100%;
+}

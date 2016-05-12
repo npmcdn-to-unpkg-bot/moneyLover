@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\defaultWallet;
 use App\Transaction;
+use Auth;
 
 class Wallet extends Model
 {
@@ -22,7 +23,8 @@ class Wallet extends Model
 	}
 
 	public static function getAll() {
-		return Wallet::all();
+		$user_id = Auth::user()->id;
+		return Wallet::where('user_id', $user_id)->get();
 	}
 
 	public static function getById($wallet_id) {

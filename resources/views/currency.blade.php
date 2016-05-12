@@ -36,27 +36,27 @@
 			</div>
 			<div class="currency_select valign-wrapper">
 				<div class="currency">
-					<img src="{{url('/icon/currency/Vietnam Dong.png')}}">
+					<img src="{{url('/icon/currency/vnd.png')}}">
 					<input class="with-gap" name="currency" value="vnd" type="radio" id="vnd" checked />
 	    			<label for="vnd">{{trans('currency.vndN')}}</label>
 				</div>
 				<div class="currency">
-					<img src="{{url('/icon/currency/British Pound.png')}}">
+					<img src="{{url('/icon/currency/pound.png')}}">
 					<input class="with-gap" name="currency" value="pound" type="radio" id="pound"/>
 	    			<label for="pound">{{trans('currency.poundN')}}</label>
 				</div>
 				<div class="currency">
-					<img src="{{url('/icon/currency/US Dollar.png')}}">
+					<img src="{{url('/icon/currency/dollar.png')}}">
 					<input class="with-gap" name="currency" value="dollar" type="radio" id="dollar"/>
 	    			<label for="dollar">{{trans('currency.dollarN')}}</label>
 				</div>
 				<div class="currency">
-					<img src="{{url('/icon/currency/Euro.png')}}">
+					<img src="{{url('/icon/currency/euro.png')}}">
 					<input class="with-gap" name="currency" value="euro" type="radio" id="euro"/>
 	    			<label for="euro">{{trans('currency.euroN')}}</label>
 				</div>
 				<div class="currency">
-					<img src="{{url('/icon/currency/Japanese Yen.png')}}">
+					<img src="{{url('/icon/currency/yen.png')}}">
 					<input class="with-gap" name="currency" value="yen" type="radio" id="yen"/>
 	    			<label for="yen">{{trans('currency.yenN')}}</label>
 				</div>

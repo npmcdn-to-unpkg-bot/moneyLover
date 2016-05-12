@@ -52,6 +52,10 @@ Route::group(['middleware' => ['web']], function () {
             'as' => 'bill.destroy',
             'uses' => 'billController@deleteItem'
         ]);
+        Route::post('/{id}', [
+            'as' => 'bill.update',
+            'uses' => 'billController@updateItem'
+        ]);
     });
 
     //Wallet route

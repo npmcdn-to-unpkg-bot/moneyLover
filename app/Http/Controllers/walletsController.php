@@ -9,6 +9,12 @@ use App\Transaction;
 
 class walletsController extends Controller
 {
+
+	public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 	public function index() {
 		$wallets = Wallet::getAll();
 		$trans = Transaction::getAll();

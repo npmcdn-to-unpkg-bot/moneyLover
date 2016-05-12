@@ -75,7 +75,7 @@
 	<div class="tranlist" id="tranlist"></div>
 	<div class="row cell colspan12 sorry" id="sorry"></div>
 
-		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="50%" class="add-new-category">
+		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="40%" class="add-new-category">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -119,6 +119,20 @@
 									</div>
 									<div class="row">
 						    			<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/39.png')}}">
+						    			</div>
+										<div class="input-control"data-role="select">
+										    <select class="inp-select-wallet">
+										    	@foreach ($wallets as $wallet) 
+											        <option value="{{$wallet->icon}}">
+										        		{{$wallet->name}}
+										        	</option>
+										        @endforeach
+										    </select>
+										</div>
+									</div>
+									<div class="row">
+						    			<div class="cell colspan2 icon-prefix">
 						    				<img class="input-icon" src="{{url('icon/76.png')}}">
 						    			</div>
 										<div class="input-control modern text">
@@ -157,7 +171,7 @@
 				}
 			}
 			document.getElementById("sorry").innerHTML = "";
-			if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/crydog.png')}}"><span> Không có giao dịch nào </span>';
+			if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/cry.png')}}"><span> Không có giao dịch nào </span>';
 
 			$('.previousMonth').click(function () {
 				check=true;
@@ -175,7 +189,7 @@
 					}
 				}
 				document.getElementById("sorry").innerHTML = "";
-				if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/crydog.png')}}"><span> Không có giao dịch nào </span>';
+				if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/cry.png')}}"><span> Không có giao dịch nào </span>';
 				$(function(){
 		            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super, .list, .transactionListThisMonth");
 		            $.each(tiles, function(){

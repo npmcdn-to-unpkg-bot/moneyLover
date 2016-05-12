@@ -3,13 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Auth;
 
 class Transaction extends Model
 {
 	protected $table="transactions";
 
 	public static function getAll() {
-		return Transaction::all();
+		$user_id =Auth::user()->id;
+		return Transaction::where('user_id', $user_id)->get();
 	}
 
 	public static function getById($wallet_id) {
@@ -27,6 +29,7 @@ class Transaction extends Model
 		$new->note = $request->note;
 		$new->date = $request->date;
 		$new->wallet_id = $wallet_id;
+		$new->user_id = Auth::user()->id;
 		$new->save();
 		return;
 	}

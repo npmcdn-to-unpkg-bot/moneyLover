@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="{{url('/MetroUI/js/metro.js')}}"></script>
 	<script type="text/javascript" src="{{url('/MetroUI/js/docs.js')}}"></script>
 	<script type="text/javascript" src="{{url('/js/moment.js')}}"></script>
+	<script type="text/javascript" src="{{url('/MetroUI/js/select2.min.js')}}"></script>
 </head>
 <body spellcheck="false" ng-app="app">
 	<?php 
