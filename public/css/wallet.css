@@ -15,6 +15,7 @@
 
 .wallet_i {
 	border-right: 1px solid #ccc;
+	align-items: center;
 }
 
 .wallet_i:hover .wallet-icon, .wallet_i:hover .wallet-name{
@@ -132,4 +133,12 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+.newBillContent  .input-control {
+	width: 100%;
+}
+
+.datepickBut {
+	top: 8px !important;
 }

@@ -192,3 +192,15 @@ button:hover {
             -webkit-transform: scale(.8);
             transform: scale(.8);
 }
+
+.input-icon {
+	max-width: 40px;
+	max-height: 40px;
+}
+
+.icon-prefix {
+	display: flex !important;
+	align-items: flex-end; 
+	justify-content: center; 
+	margin: 11px 10px 11px 0 !important;
+}

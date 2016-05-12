@@ -3,7 +3,8 @@
 	if ($cat->type == 1) $checked[0] = "checked";
 	else $checked[1] = "checked";
 ?>
-<div class="panel">
+<div class="panel panelLoading">
+	<span class="closeButton"></span>
     <div class="heading bg-lightRed">
         <span class="title">{{$cat->name}}</span>
     </div>
@@ -12,7 +13,7 @@
     		{{ csrf_field() }}
 	    	<div class="row" style="justify-content: center;">
 	    		<div class="cell colspan3 cat_img choose_categories">
-	    			<img class="category-icon" src="{{url('/icon/'.$cat->icon)}}">
+	    			<a href="#"><img class="category-icon" src="{{url('/icon/'.$cat->icon)}}"></a>
 	    			<input type="hidden" name="icon" value="{{$cat->icon}}" class="iconInput">
 	    		</div>
 	    		<div class="cell colspan1"></div>
@@ -64,6 +65,7 @@
 	</div>
 </div>
 <script type="text/javascript">
+
 	$(".choose-icon").hide();
 	$(".dialog-close-button").show();
 

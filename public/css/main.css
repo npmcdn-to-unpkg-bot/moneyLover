@@ -3,7 +3,7 @@
     src: url(../font/Bitter/Bitter-Regular.ttf);
 }
 
-html {
+html, input, div {
 	font-family: "Roboto", "Segoe UI", "Open Sans", "sans-serif", "serif" !important;
 }
 

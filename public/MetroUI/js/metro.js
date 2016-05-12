@@ -4702,7 +4702,8 @@ $.widget( "metro.dialog" , {
             $("<span/>").addClass('dialog-close-button').appendTo(element).on('click', function(){
                 that.close();
             });
-        }
+
+        };
 
         this._hide();
     },
@@ -4712,6 +4713,8 @@ $.widget( "metro.dialog" , {
         element.css({
            visibility: "hidden"
         });
+        $(".placeholder").css("transition", "none");
+        $(".label").css("transition", "none");
     },
 
     _show: function(){
@@ -4722,7 +4725,9 @@ $.widget( "metro.dialog" , {
         element.css({
            visibility: "visible"
         });
-    },
+        $(".placeholder").css("transition", "all 0.3s linear");
+        $(".label").css("transition", "all 0.3s linear");
+},
 
     _setPosition: function(){
         var that = this, element = this.element, o = this.options;

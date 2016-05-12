@@ -9,7 +9,7 @@
 	<div class="wallet-content">
 		<div class="wallet-list row">
 			<a class="wallet_i cell colspan3" href="{{route('wallets.index')}}">
-				<img class="wallet-icon" src="{{url('icon/Wallet-96.png')}}">
+				<img class="wallet-icon" src="{{url('icon/69.png')}}">
 				<?php 
 					$WalletUse = "";
 					if ($currentWallet == -1) $WalletUse = "walletNow";
@@ -33,7 +33,7 @@
 					@if ($key == 2)
 						<div class="wallet-dropdown cell colspan3" style="border: none">
 							<a href="" class="wallet-info dropdown-toggle">
-								<img class="wallet-icon" src="{{url('icon/Coins-96.png')}}">
+								<img class="wallet-icon" src="{{url('icon/39.png')}}">
 								<span class="wallet-name">Ví khác</span>
 							</a>
 							<ul class="dropdown-menu bg-lightRed" data-role="dropdown">
@@ -75,7 +75,7 @@
 	<div class="tranlist" id="tranlist"></div>
 	<div class="row cell colspan12 sorry" id="sorry"></div>
 
-		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="30%" class="add-new-category">
+		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="50%" class="add-new-category">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -87,6 +87,9 @@
 					    	<div class="row" style="justify-content: center;">
 					    		<div class="cell colspan8 newBillContent">
 						    		<div class="row">
+						    			<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon group-icon" src="{{url('icon/19.png')}}">
+						    			</div>
 										<div class="input-control modern text">
 										    <input type="text" name="type" required="">
 										    <span class="label">Nhóm</span>
@@ -94,6 +97,9 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/currency/'.Auth::user()->currency).'.png'}}">
+						    			</div>
 										<div class="input-control modern text">
 										    <input type="number" name="totalPay" class="totalPayInput" required>
 										    <span class="label">Tổng số tiền</span>
@@ -101,6 +107,9 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/7.png')}}">
+						    			</div>
 										<div class="input-control modern text datePicker" data-role="datepicker">
 										    <input type="text" name="date" required>
 										    <span class="label">Ngày</span>
@@ -109,13 +118,17 @@
 										</div>
 									</div>
 									<div class="row">
+						    			<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/76.png')}}">
+						    			</div>
 										<div class="input-control modern text">
-										    <input type="text" name="note">
+										    <input type="text" name="note" required="">
 										    <span class="label">Ghi chú</span>
 										    <span class="placeholder">Ghi chú</span>
 										</div>
 									</div>
 									<div class="row">
+										<div class="cell colspan2"></div>
 										<button class="button" style="color: white;">Thêm</button>
 									</div>
 								</div>

@@ -110,7 +110,7 @@
 					    </li>
 			    	</ul>
 			    </div>
-			    <div class="cell colspan7 app-content">
+			    <div class="cell colspan7 app-content" style="height: 100%">
 					@yield('content')
 				</div>
 				<div class="cell colspan3" style="position: relative;">
@@ -122,6 +122,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="footer">
+			<div class="row"></div>
 		</div>
 	</div>
 </body>

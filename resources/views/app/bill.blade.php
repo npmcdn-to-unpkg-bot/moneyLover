@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="30%" class="add-new-category">
+	<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="40%" class="add-new-category">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -65,6 +65,9 @@
 					    	<div class="row" style="justify-content: center;">
 					    		<div class="cell colspan8 newBillContent">
 						    		<div class="row">
+						    			<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/53.png')}}">
+						    			</div>
 										<div class="input-control modern text">
 										    <input type="text" name="name" required="">
 										    <span class="label">Hóa đơn</span>
@@ -72,6 +75,9 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/currency/'.Auth::user()->currency).'.png'}}">
+						    			</div>
 										<div class="input-control modern text">
 										    <input type="number" name="totalPay" class="totalPayInput" required>
 										    <span class="label">Tổng số tiền</span>
@@ -79,6 +85,9 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="cell colspan2 icon-prefix">
+						    				<img class="input-icon" src="{{url('icon/7.png')}}">
+						    			</div>
 										<div class="input-control modern text datePicker" data-role="datepicker">
 										    <input type="text" name="deadLine" required>
 										    <span class="label">Hạn thanh toán</span>

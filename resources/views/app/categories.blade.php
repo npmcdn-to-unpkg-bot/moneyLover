@@ -21,7 +21,7 @@
 				</button>
 			</a>
 		</div>
-		<div data-role="dialog" id="dialog" data-overlay="true" data-overlay-color="op-dark" data-close-button="true" class="add-new-category" data-width="30%">
+		<div data-role="dialog" id="dialog" data-overlay="true" data-overlay-color="op-dark" data-close-button="true" class="add-new-category" data-width="40%">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -32,8 +32,8 @@
 				    		{{ csrf_field() }}
 					    	<div class="row" style="justify-content: center;">
 					    		<div class="cell colspan3 cat_img choose_categories">
-					    			<img src="{{url('/icon/Questions.png')}}" class="category-icon">
-					    			<input type="hidden" name="icon" value="Questions.png" class="iconInput">
+					    			<a href="#"><img src="{{url('/icon/Questions.png')}}" class="category-icon new-cat-icon"></a>
+					    			<input type="hidden" name="icon" value="Questions.png" class="iconInput iconInputs">
 					    		</div>
 					    		<div class="cell colspan1"></div>
 					    		<div class="cell colspan8">
@@ -127,7 +127,7 @@
 						        <img src="{{url('/icon/'.$cat->icon)}}" class="list-icon">
 						        <span class="list-title">{{$cat->name}}</span>
 						    </div>
-						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
+						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="40%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
 					    @endif
 					@endforeach
 				</div>
@@ -141,7 +141,7 @@
 						        <img src="{{url('/icon/'.$cat->icon)}}" class="list-icon">
 						        <span class="list-title">{{$cat->name}}</span>
 						    </div>
-						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="30%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
+						    <div data-role="dialog" id="dialog_{{$cat->id}}" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="40%" class="add-new-category" data-href="{{url('/categories/'.$cat->id)}}"> </div>
 					    @endif
 					@endforeach
 				</div>
