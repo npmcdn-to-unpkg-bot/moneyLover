@@ -17,8 +17,7 @@
 				<span class="wallet-name {{$WalletUse}}">Tất cả</span>
 			</a>
 			@foreach ($wallets as $key=>$wallet)
-				<?php $key++; ?>
-				@if ($key < 3)
+				<?php $key++?>
 					<div class="wallet_i cell colspan3">
 						<a class="wallet-info" href="{{route('wallets.show', ['wallet_id' => $wallet->id])}}">
 							<img class="wallet-icon" src="{{url('icon/'.$wallet->icon)}}">
@@ -30,29 +29,13 @@
 							@endif
 						</a>
 					</div>
-					@if ($key == 2)
-						<div class="wallet-dropdown cell colspan3" style="border: none">
-							<a href="" class="wallet-info dropdown-toggle">
-								<img class="wallet-icon" src="{{url('icon/39.png')}}">
-								<span class="wallet-name">Ví khác</span>
-							</a>
-							<ul class="dropdown-menu bg-lightRed" data-role="dropdown">
-					@endif
-				@else
-					@foreach ($trans as $tran)
-			    			<a href="{{route('wallets.show', ['wallet_id' => $wallet->id])}}">
-					    		<img class="wallet-icon" src="{{url('icon/'.$wallet->icon)}}">
-					    		<span class="wallet-name wallet-{{$wallet->id}}">{{$wallet->name}}</span>
-					    	</a>
-					@endforeach
-				@endif
 			@endforeach
-								<a href="" class="wallet-info">
-									<img class="wallet-icon" src="{{url('icon/Invitation-96.png')}}">
-									<span class="wallet-name-dd"> Thêm ví mới </a>
-								</a>
-	                		</ul>
-	                	</div>
+			<div class="wallet_i cell colspan3" style="border: none">
+						<a class="wallet-info" href="#">
+							<img class="wallet-icon" src="{{url('icon/39.png')}}">
+							<span class="wallet-name">Hướng dẫn</span>
+						</a>
+					</div>
 		</div>
 		<div class="grid transaction">
 			<div class="row transaction-detail">
@@ -68,7 +51,7 @@
 			</div>
 		</div>
 		<div class="tranButton">
-			<button class="button cycle-button large-button success" onclick="showDialog('#dialog')">+</button>
+			<button class="button cycle-button large-button success ebut" onclick="showDialog('#dialog')" style="font-size: 25px">+</button>
 		</div>
 	</div>
 
@@ -121,14 +104,15 @@
 						    			<div class="cell colspan2 icon-prefix">
 						    				<img class="input-icon" src="{{url('icon/39.png')}}">
 						    			</div>
-										<div class="input-control"data-role="select">
-										    <select class="inp-select-wallet">
+										<div class="input-control modern" data-role="select" style="width: 100%">
+										    <select class="inp-select-wallet" name="wallet">
 										    	@foreach ($wallets as $wallet) 
-											        <option value="{{$wallet->icon}}">
+											        <option value="{{$wallet->id}}">
 										        		{{$wallet->name}}
 										        	</option>
 										        @endforeach
 										    </select>
+										    <span class="label">Ngày</span>
 										</div>
 									</div>
 									<div class="row">
@@ -136,7 +120,7 @@
 						    				<img class="input-icon" src="{{url('icon/76.png')}}">
 						    			</div>
 										<div class="input-control modern text">
-										    <input type="text" name="note" required="">
+										    <input type="text" name="note">
 										    <span class="label">Ghi chú</span>
 										    <span class="placeholder">Ghi chú</span>
 										</div>
@@ -227,7 +211,7 @@
 					}
 				}
 				document.getElementById("sorry").innerHTML = "";
-				if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/crydog.png')}}"><span> Không có giao dịch nào </span>';
+				if (check) document.getElementById("sorry").innerHTML = '<img src="{{url('icon/cry.png')}}"><span> Không có giao dịch nào </span>';
 				$(function(){
 		            var tiles = $(".tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super, .list, .transactionListThisMonth");
 		            $.each(tiles, function(){

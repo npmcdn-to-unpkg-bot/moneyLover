@@ -59,7 +59,7 @@
 		    			<a href="" class="dropdown-toggle notHover place-right">Xin chào, {{$name}} </a>
 			    		<ul class="d-menu place-right" data-role="dropdown">
 			    			<li>
-				    			<a href="{{url('/logout')}}">
+				    			<a href="{{route('user.index')}}">
 						    		<span class="mif-user"></span>
 						    		<span class="menu-button">Tài khoản</span>
 						    	</a>
@@ -104,7 +104,7 @@
 					    	</a>
 					    </li>
 					    <li>
-					    	<a href="#" class="{{$state[4]}}">
+					    	<a href="{{route('user.index')}}" class="{{$state[4]}}">
 					    		<img src="{{url('/icon/63.png')}}">
 					    		<span class="menu-button">Cài đặt</span>
 					    	</a>

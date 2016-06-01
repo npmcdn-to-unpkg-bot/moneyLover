@@ -1,0 +1,42 @@
+.left-model img, .right-model img {
+	width: 60%;
+}
+
+.left-model, .right-model {
+	display: flex;
+	justify-content: center;
+}
+
+.left-model {
+	align-items: flex-start;
+}
+
+.right-model {
+	align-items: flex-end;
+}
+
+.user-content {
+	justify-content: center;
+}
+
+.user-title {
+	width: 100% !important;
+	text-align: center;
+	font-size: 24px;
+}
+
+.user-update {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.modern {
+	width: 70% !important;
+}
+
+.save-button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}

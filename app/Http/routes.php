@@ -81,4 +81,12 @@ Route::group(['middleware' => ['web']], function () {
             'uses' => 'walletsController@createTransaction'
         ]);
     });
+
+    //User route
+    Route::group(['prefix' => 'user'], function() {
+        Route::get('/', [
+            'as' => 'user.index',
+            'uses' => 'userController@index'
+        ]);
+    });
 });

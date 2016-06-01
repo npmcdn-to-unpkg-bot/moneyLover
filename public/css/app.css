@@ -6,6 +6,15 @@ button:hover {
 	border: none !important;
 }
 
+.main-content {
+	padding: 20px;
+	margin: 0;
+	background-color: #ffffff;
+	border: 1px transparent solid;
+	border-bottom-color: #eeeeee;
+	position: relative;
+}
+
 .app-bar {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -97,13 +106,12 @@ button:hover {
 	color: #ffffff;
 }
 
-.button-list > button:hover, .button-list > a:hover, .tranButton:hover {
+.button-list > button:hover, .button-list > a:hover, .ebut:hover {
 	transform: rotate(360deg);
 	transition-duration: 1.5s;
 }
 
 .categories-list {
-	
 	margin-top: 15px;
 	position: relative;
 }

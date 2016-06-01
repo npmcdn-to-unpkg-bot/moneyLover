@@ -40,8 +40,8 @@ class walletsController extends Controller
 		return redirect()->back();
 	}
 
-	public function createTransaction(Request $request, $wallet_id) {
-		Transaction::createItem($request, $wallet_id);
+	public function createTransaction(Request $request) {
+		Transaction::createItem($request);
 		return redirect()->back();
 	}
 }

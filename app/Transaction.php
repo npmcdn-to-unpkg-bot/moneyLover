@@ -22,13 +22,13 @@ class Transaction extends Model
 		Transaction::where('wallet_id', $wallet_id)->delete();
 	}
 
-	public static function createItem($request, $wallet_id) {
+	public static function createItem($request) {
 		$new = new Transaction;
 		$new->type = $request->type;
 		$new->totalMoney = $request->totalPay;
 		$new->note = $request->note;
 		$new->date = $request->date;
-		$new->wallet_id = $wallet_id;
+		$new->wallet_id = $request->wallet;
 		$new->user_id = Auth::user()->id;
 		$new->save();
 		return;

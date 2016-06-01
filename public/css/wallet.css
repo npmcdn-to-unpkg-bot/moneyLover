@@ -145,4 +145,35 @@
 
 .select2-container {
 	width: 100%;
+	position: relative;
+	height: 3rem;
+	display: inline-block;
+	margin: .625rem 0;
+}
+
+.select2-selection--single {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	right: 0;
+	bottom: .5rem;
+	border: 0 !important;
+	border-bottom: 2px #DDDDDD solid !important;
+	width: 100%;
+	background-color: transparent;
+	outline: none;
+	font-size: 1rem;
+	padding-left: 0;
+	width: 100%;
+	z-index: 2;
+	height: 1.75rem;
+}
+
+.select2-selection--single:focus {
+	border-bottom-color: #26a69a;
+}
+
+.select2-selection__rendered {
+	margin-left: 0 !important;
+	padding-left: 0 !important;
 }
