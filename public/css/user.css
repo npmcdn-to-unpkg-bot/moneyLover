@@ -40,3 +40,11 @@
 	display: flex;
 	justify-content: center;
 }
+
+.errors {
+	width: 70%;
+}
+
+.Success {
+	color: green;
+}

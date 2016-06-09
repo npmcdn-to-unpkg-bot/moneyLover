@@ -23,6 +23,10 @@ class User extends Authenticatable
             ->update(['sex' => $sex, 'currency' => $currency]);
     }
 
+    public static function changeUser($id, $request) {
+        User::where('id', $id)->update(['password' => bcrypt($request->password)]);
+    }
+
     /**
      * The attributes excluded from the model's JSON form.
      *

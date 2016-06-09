@@ -88,5 +88,10 @@ Route::group(['middleware' => ['web']], function () {
             'as' => 'user.index',
             'uses' => 'userController@index'
         ]);
+
+        Route::post('/', [
+            'as' => 'user.post',
+            'uses' => 'userController@changeInfo'
+        ]);
     });
 });

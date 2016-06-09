@@ -175,11 +175,10 @@ button:hover {
 .app-notify {
 	position: absolute;
 	height: 100%;
-	width: 100%;
-	margin-left: 30px;
 	box-shadow: 1px 0 0 #f0f0f2 inset;
 	border-left: 1px solid #ccc;
 	padding: 10px;
+	margin-left: 30px;
 }
 
 .notify-title {
@@ -212,3 +211,4 @@ button:hover {
 	justify-content: center; 
 	margin: 11px 10px 11px 0 !important;
 }
+

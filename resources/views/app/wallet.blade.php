@@ -50,9 +50,11 @@
 				</div>
 			</div>
 		</div>
+		@if ($WalletUse != "")
 		<div class="tranButton">
 			<button class="button cycle-button large-button success ebut" onclick="showDialog('#dialog')" style="font-size: 25px">+</button>
 		</div>
+		@endif
 	</div>
 
 	<div class="tranlist" id="tranlist"></div>

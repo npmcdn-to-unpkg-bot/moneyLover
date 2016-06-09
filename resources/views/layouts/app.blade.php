@@ -117,8 +117,7 @@
 				<div class="cell colspan3" style="position: relative;">
 					<div class="app-notify">
 						<div class="notify-title row" style="align-items: center;"> 
-							<span class="mif-alarm-on"> </span>
-							 Nhắc nhở 
+						
 						</div>
 					</div>
 				</div>

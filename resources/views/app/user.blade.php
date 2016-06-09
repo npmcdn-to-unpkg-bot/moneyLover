@@ -16,30 +16,47 @@
 				</div>
 				<div class="user-content cell colspan8">
 					<div class="user-title">
-						Chỉnh sửa thông tin cá nhân
+						Đổi mật khẩu
 					</div>
-					<form>
+					<form method="post" action="{{route('user.post')}}">
+						{{ csrf_field() }}
 						<div class="user-update">
-							<div class="input-control modern text">
-							    <input type="text" name="name" value="{{$name}}" required="">
-							    <span class="label">Tên</span>
-							    <span class="placeholder">Tên</span>
-							</div>
 							<div class="input-control modern text">
 							    <input type="password" name="current_password" required="">
 							    <span class="label">Mật khẩu hiện tại</span>
 							    <span class="placeholder">Mật khẩu hiện tại</span>
 							</div>
+							@if ($errors->has('curPass'))
+						        <div class="errors">
+						          <div class="Error">
+						            <strong>{{ $errors->first('curPass') }}</strong>
+						          </div>
+						        </div>
+						     @endif
 							<div class="input-control modern text">
 							    <input type="password" name="password" required="">
 							    <span class="label">Mật khẩu mới</span>
 							    <span class="placeholder">Mật khẩu mới</span>
 							</div>
+							@if ($errors->has('rePass'))
+						        <div class="errors">
+						          <div class="Error">
+						            <strong>{{ $errors->first('rePass') }}</strong>
+						          </div>
+						        </div>
+						     @endif
 							<div class="input-control modern text">
-							    <input type="password" name="confirm_password" required="">
+							    <input type="password" name="re_password" required="">
 							    <span class="label">Xác nhận mật khẩu</span>
 							    <span class="placeholder">Xác nhận mật khẩu</span>
 							</div>
+							@if ($errors->has('changeSucc'))
+						        <div class="errors">
+						          <div class="Success">
+						            <strong>{{ $errors->first('changeSucc') }}</strong>
+						          </div>
+						        </div>
+						     @endif
 							<div class="row save-button">
 								<button class="button cycle-button" style="color: white; background-color: #26a69a">
 									<span class="mif-floppy-disk"></span>
