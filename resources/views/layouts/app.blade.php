@@ -18,11 +18,11 @@
 </head>
 <body spellcheck="false" ng-app="app">
 	<?php 
-		$currency = 'currency.'.Auth::user()->currency;
 		$name = Auth::user()->name;
 		$sex = Auth::user()->sex;
 		if ($sex == 2) $avatar = url('/icon/User-Female.png');
 		else $avatar = url('/icon/User-Male.png');
+		$currency = trans('currency.'.Auth::user()->currency);
 	?>
 	<script type="text/javascript">
 		$(function(){
@@ -76,7 +76,7 @@
 		    </div>
 	    </div>
 	    <div class="flex-grid">
-	    	<div class="row">
+	    	<div class="row content-app">
 			    <div class="cell colspan2 menu-bar">
 			    	<ul class="v-menu subdown">
 					    <li>
@@ -111,21 +111,72 @@
 					    </li>
 			    	</ul>
 			    </div>
-			    <div class="cell colspan7 app-content" style="height: 100%">
+			    <div class="cell colspan7 app-content">
 					@yield('content')
 				</div>
-				<div class="cell colspan3" style="position: relative;">
+				<div class="cell colspan3 notix">
 					<div class="app-notify">
-						<div class="notify-title row" style="align-items: center;"> 
-						
+						<div class="notify-div">
+							<div class="notifys-icon">
+								<img src="{{url('icon/69.png')}}">
+							</div>
+							<div class="notifys-content">
+								Số dư: {{$wallets[0]->total+$wallets[1]->total}} {{$currency}}
+							</div>
+						</div>
+						<div class="notify-div">
+							<div class="notifys-icon">
+								<img src="{{url('icon/44.png')}}">
+							</div>
+							<div class="notifys-content">
+								Tiền mặt: {{$wallets[0]->total}} {{$currency}}
+							</div>
+							<div class="notifys-icon">
+								<img src="{{url('icon/3.png')}}">
+							</div>
+							<div class="notifys-content">
+								TK Ngân hàng: {{$wallets[1]->total}} {{$currency}}
+							</div>
+						</div>
+						<div class="notify-div lastblock">
+							<div class="notifys-icon">
+								<img src="{{url('icon/16.png')}}">
+							</div>
+							<div class="notifys-content countTrans">
+							</div>
+							<div class="notifys-icon">
+								<img src="{{url('icon/17.png')}}">
+							</div>
+							<div class="notifys-content countTransThisMonth">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="row"></div>
-		</div>
+		<div class="push"></div>
 	</div>
+	<div class="footer">
+		<div class="logo">
+			<img src="{{url('images/logo.png')}}">
+		</div>
+		<div class="f_appName">MONEY LOVER</div>
+		<div class="contact"> Liên hệ với chúng tôi: moneyloverteam@gmail.com | Phone: 01659643835</div>
+	</div>
+	<script type="text/javascript">
+		var eNow = new Date();
+		var eMoment = moment(eNow);
+		var m = eMoment.format("M")
+		var trans = <?php echo $trans?>;
+		$(".countTrans").text("Tổng số giao dịch: " + trans.length);
+		var mtrans = 0; 
+		for (i = 0; i < trans.length; i++) {
+			var d = new Date(trans[i].date);
+			var mm = d.format("m");
+			if (mm == m) mtrans++;
+		}
+		$(".countTransThisMonth").text("Số giao dịch tháng " + eMoment.format("M-Y") + " : " + mtrans);
+		$(".lastblock").attr("style", "border-bottom-color: #eeeeee");
+	</script>
 </body>
 </html>

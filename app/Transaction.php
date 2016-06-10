@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Auth;
+use App\wallet;
 
 class Transaction extends Model
 {
@@ -25,12 +26,17 @@ class Transaction extends Model
 	public static function createItem($request) {
 		$new = new Transaction;
 		$new->type = $request->type;
+		$new->typeGroup = $request->typeGroup;
 		$new->totalMoney = $request->totalPay;
 		$new->note = $request->note;
 		$new->date = $request->date;
 		$new->wallet_id = $request->wallet;
 		$new->user_id = Auth::user()->id;
 		$new->save();
+		$cate = Wallet::where('id', $new->wallet_id)->first();
+		if($new->typeGroup == 1) $cate->total += $new->totalMoney;
+		else $cate->total -= $new->totalMoney;
+		$cate->save();
 		return;
 	}
 }

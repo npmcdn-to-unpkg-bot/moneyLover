@@ -3,7 +3,6 @@
 @section('content')
 	<?php
 		$state = array("actived", "", "", "", "");
-		$currency = trans('currency.'.Auth::user()->currency);
 	?>
 	<link rel="stylesheet" type="text/css" href="{{url('css/wallet.css')}}">
 	<div class="wallet-content">
@@ -60,7 +59,7 @@
 	<div class="tranlist" id="tranlist"></div>
 	<div class="row cell colspan12 sorry" id="sorry"></div>
 
-		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-overlay-click-close="true" data-width="40%" class="add-new-category">
+		<div data-role="dialog" id="dialog" data-overlay="true" data-close-button="true" data-overlay-color="op-dark" data-width="40%" class="add-new-category">
 			<div class="grid">
 				<div class="panel">
 				    <div class="heading bg-lightRed">
@@ -76,7 +75,9 @@
 						    				<img class="input-icon group-icon" src="{{url('icon/19.png')}}">
 						    			</div>
 										<div class="input-control modern text">
-										    <input type="text" name="type" required="">
+										    <input type="text" required="" class="categoriesGroup" id="group">
+										    <input class="typeGroup" type="hidden" name="typeGroup">
+										    <input class="categoriesGroups" type="hidden" name="type">
 										    <span class="label">Nhóm</span>
 										    <span class="placeholder">Nhóm</span>
 										</div>
@@ -139,7 +140,45 @@
 		    </div>
 		</div>
 
+		<div class="choose-category">
+			<div class="row" style="background-color: #26a69a; padding-left: 20px; padding-right: 20px; align-items: center; width: 100%; justify-content: space-between;">
+				<div class="choose-icon-title">Chọn nhóm</div>
+				<button class="close"><span class="mif-backward"></span></button>
+			</div>
+			<div class="icon-list">
+				<div class="group-title">Thu nhập</div>
+				<div class="listCategories">
+		    	@foreach ($categories as $category)
+		    		@if ($category->type == 1)
+		    			<?php $category->defaultLink = url('icon') ?>
+			    		<div class="tile-small icon" data-role="title" onclick="chooseCategory({{$category}})">
+							<img src="{{url('icon/'.$category->icon)}}">
+							<div class="list-title">
+								{{$category->name}}
+							</div>
+						</div>
+					@endif
+		    	@endforeach
+		    	</div>
+		    	<div class="group-title">Chi tiêu</div>
+		    	<div class="listCategories">
+		    	@foreach ($categories as $category)
+		    		@if ($category->type == 2)
+		    			<?php $category->defaultLink = url('icon') ?>
+			    		<div class="tile-small icon" data-role="title" onclick="chooseCategory({{$category}})">
+							<img src="{{url('icon/'.$category->icon)}}">
+							<div class="list-title">
+								{{$category->name}}
+							</div>
+						</div>
+					@endif
+		    	@endforeach
+		    	</div>
+			</div>
+		</div>
+
 		<script>
+			var categories = <?php echo $categories ?>;
 			var tran = <?php echo $trans ?>;
 			var eNow = new Date();
 			var eMoment = moment(eNow);
@@ -152,7 +191,16 @@
 				var cm = date.format("m");
 				var cy = date.format("yyyy");
 				if (m == cm && y == cy) {
-					document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+tran[i].date+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="{{url('icon/cards.png')}}"><span class="type-transaction">'+ tran[i].type +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction">'+tran[i].totalMoney+'</div><div class="cell colspan1"></div></div></div>';
+					for (j = 0; j < categories.length; j++) {
+						if (categories[j].id == tran[i].type) {
+							iconSRC = {!! json_encode(url('/icon')) !!}  + "/" + categories[j].icon;
+							typeName = categories[j].name;
+							if (categories[j].type == 1) total = "+" +  tran[i].totalMoney;
+							else total = "-" +  tran[i].totalMoney;
+							typeGroup = "group" + categories[j].type;
+						}
+					}
+					document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+date.format("dd-mm-yyyy")+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="'+ iconSRC+'"><span class="type-transaction">'+ typeName +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction '+ typeGroup + '">'+ total +'</div><div class="cell colspan1"></div></div></div>';
 					check=false;
 				}
 			}
@@ -166,11 +214,20 @@
 			    document.getElementById("tranlist").innerHTML = "";
 				var m = eMoment.format("M"), y = eMoment.format("Y");
 				for (i = 0; i < tran.length; i++) {
+					for (j = 0; j < categories.length; j++) {
+						if (categories[j].id == tran[i].type) {
+							iconSRC = {!! json_encode(url('/icon')) !!}  + "/" + categories[j].icon;
+							typeName = categories[j].name;
+							if (categories[j].type == 1) total = "+" +  tran[i].totalMoney;
+							else total = "-" +  tran[i].totalMoney;
+							typeGroup = "group" + categories[j].type;
+						}
+					}
 					date = new Date(tran[i].date);
 					var cm = date.format("m");
 					var cy = date.format("yyyy");
 					if (m == cm && y == cy) {
-						document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+tran[i].date+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="{{url('icon/cards.png')}}"><span class="type-transaction">'+ tran[i].type +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction">'+tran[i].totalMoney+'</div><div class="cell colspan1"></div></div></div>';
+						document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+date.format("dd-mm-yyyy")+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="'+iconSRC+'"><span class="type-transaction">'+ typeName +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction '+ typeGroup + '">'+total+'</div><div class="cell colspan1"></div></div></div>';
 						check=false;
 					}
 				}
@@ -204,11 +261,20 @@
 			    document.getElementById("tranlist").innerHTML = "";
 				var m = eMoment.format("M"), y = eMoment.format("Y");
 				for (i = 0; i < tran.length; i++) {
+					for (j = 0; j < categories.length; j++) {
+						if (categories[j].id == tran[i].type) {
+							iconSRC = {!! json_encode(url('/icon')) !!}  + "/" + categories[j].icon;
+							typeName = categories[j].name;
+							if (categories[j].type == 1) total = "+" +  tran[i].totalMoney;
+							else total = "-" +  tran[i].totalMoney;
+							typeGroup = "group" + categories[j].type;
+						}
+					}
 					date = new Date(tran[i].date);
 					var cm = date.format("m");
 					var cy = date.format("yyyy");
 					if (m == cm && y == cy) {
-						document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+tran[i].date+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="{{url('icon/cards.png')}}"><span class="type-transaction">'+ tran[i].type +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction">'+tran[i].totalMoney+'</div><div class="cell colspan1"></div></div></div>';
+						document.getElementById("tranlist").innerHTML += '<div class="transactionListThisMonth"><div class="row date-title">'+date.format("dd-mm-yyyy")+'</div><div class="row transactionDetails"><div class="cell colspan1"></div><div class="cell colspan5"><img class="tran-icon" src="'+iconSRC+'"><span class="type-transaction">'+ typeName +'</span></div><div class="cell colspan1"></div><div class="cell colspan4 total-transaction '+ typeGroup + '">'+total+'</div><div class="cell colspan1"></div></div></div>';
 						check=false;
 					}
 				}
@@ -245,4 +311,5 @@
 		    });
 
 		</script>
+		<script type="text/javascript" src="{{url('js/wallets.js')}}"></script>
 @endsection

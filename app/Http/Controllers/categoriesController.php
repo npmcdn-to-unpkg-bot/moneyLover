@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Categories;
 use Auth;
 use App\Icon;
+use App\Transaction;
+use App\Wallet;
 
 class categoriesController extends Controller
 {
@@ -18,7 +20,9 @@ class categoriesController extends Controller
 	public function Index() {
 		$categories = Categories::getAll();
 		$icons = Icon::getAll();
-		return view('app.categories', compact('categories', 'icons'));
+		$trans = Transaction::getAll();
+		$wallets = Wallet::getAll();
+		return view('app.categories', compact('categories', 'icons', 'trans', 'wallets'));
 	}
 
 	public function createNew(Request $request) {

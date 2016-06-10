@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Bill;
 use Auth;
+use App\Transaction;
+use App\Wallet;
 
 class billController extends Controller
 {
@@ -16,7 +18,9 @@ class billController extends Controller
     
 	public function index() {
 		$bills = Bill::getAll(Auth::user()->id); 
-		return view('app.bill', compact('bills'));
+		$trans = Transaction::getAll();
+        $wallets = Wallet::getAll();
+		return view('app.bill', compact('bills', 'trans', 'wallets'));
 	}
 
 	public function createItem(Request $request) {

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Wallet;
 use App\Transaction;
+use App\Categories;
 
 class walletsController extends Controller
 {
@@ -19,15 +20,17 @@ class walletsController extends Controller
 		$wallets = Wallet::getAll();
 		$trans = Transaction::getAll();
 		$currentWallet = -1;
- 		return view('app.wallet', compact('wallets', 'trans', 'currentWallet'));
+		$categories = Categories::getAll();
+ 		return view('app.wallet', compact('wallets', 'trans', 'currentWallet', 'categories'));
 	}
 
 	public function showWallet($wallet_id) {
 		$wallets = Wallet::getAll();
 		$wall = Wallet::getById($wallet_id);
 		$trans = Transaction::getById($wallet_id);
+		$categories = Categories::getAll();
 		$currentWallet = $wallet_id;
-		return view('app.wallet', compact('wallets', 'trans', 'wall', 'currentWallet'));
+		return view('app.wallet', compact('wallets', 'trans', 'wall', 'currentWallet', 'categories'));
 	}
 
 	public function deleteWallet($wallet_id) {

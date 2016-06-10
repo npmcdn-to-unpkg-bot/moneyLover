@@ -172,16 +172,23 @@ button:hover {
 .deleteBut:hover {
 }
 
-.app-notify {
-	position: absolute;
-	height: 100%;
-	box-shadow: 1px 0 0 #f0f0f2 inset;
-	border-left: 1px solid #ccc;
-	padding: 10px;
-	margin-left: 30px;
+.notix {
+	position: relative;
+	max-height: 100%;
 }
 
-.notify-title {
+.app-notify {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute !important;
+	box-shadow: 1px 0 0 #f0f0f2 inset;
+	padding: 10px;
+	width: 93%;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-left: 7%;
+	border-left: 1px solid #ccc;
+	height: 100%;
 }
 
 .sorry {
@@ -196,8 +203,8 @@ button:hover {
 
 .list, .transactionListThisMonth {
 	opacity: 0;
-            -webkit-transform: scale(.8);
-            transform: scale(.8);
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
 }
 
 .input-icon {
@@ -212,3 +219,63 @@ button:hover {
 	margin: 11px 10px 11px 0 !important;
 }
 
+.notify-div {
+	width: 100%;
+	background-color: inherit;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.notifys-icon img{
+	max-width: 40px;
+	max-height: 40px;
+}
+
+.notifys-icon {
+	width: 15% !important;
+	display: flex;
+	align-items: center;
+}
+
+.notifys-content {
+	width: 80% !important;
+	align-items: center;
+	display: flex;
+}
+
+.app {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
+.footer, .push {
+	height: 4em;
+}
+
+.footer {
+	background-color: #E57373;
+	color: #ffffff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.footer .logo {
+	max-height: 35px;
+	max-width: 35px;
+	margin-left: 5%;
+	width: 100%;
+}
+
+.f_appName {
+	padding-left: 10px;
+}
+
+.contact {
+	padding-left: 30px;
+	font-size: 16px;
+}

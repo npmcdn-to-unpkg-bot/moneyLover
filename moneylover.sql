@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2016 at 12:00 AM
+-- Generation Time: Jun 11, 2016 at 12:01 AM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,25 +59,25 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `user_id`, `type`, `name`, `icon`, `updated_at`, `created_at`) VALUES
-(1220, 15, '1', 'Thưởng', '44.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1221, 15, '1', 'Tiền lãi', '22.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1222, 15, '1', 'Lương', '4.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1223, 15, '1', 'Đươc tặng', '48.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1224, 15, '1', 'Bán đồ', '56.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1225, 15, '1', 'Khoản thu khác', '16.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1226, 15, '2', 'Ăn uống', '27.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1227, 15, '2', 'Di chuyển', '30.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1228, 15, '2', 'Mua sắm', '6.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1229, 15, '2', 'Yêu & Bạn bè', '20.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1230, 15, '2', 'Giải trí', '10.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1231, 15, '2', 'Du lịch', '1.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1232, 15, '2', 'Sức khỏe', '33.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1233, 15, '2', 'Tặng quà', '73.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1234, 15, '2', 'Gia đình', '26.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1235, 15, '2', 'Giáo dục', '62.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1236, 15, '2', 'Đầu tư', '32.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1237, 15, '2', 'Bảo hiểm', '34.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(1238, 15, '2', 'Khoản chi khác', '74.png', '2016-05-12 12:28:26', '2016-05-12 12:28:26');
+(1259, 17, '1', 'Thưởng', '44.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1260, 17, '1', 'Tiền lãi', '22.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1261, 17, '1', 'Lương', '4.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1262, 17, '1', 'Đươc tặng', '48.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1263, 17, '1', 'Bán đồ', '56.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1264, 17, '1', 'Khoản thu khác', '16.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1265, 17, '2', 'Ăn uống', '27.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1266, 17, '2', 'Di chuyển', '30.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1267, 17, '2', 'Mua sắm', '6.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1268, 17, '2', 'Yêu & Bạn bè', '20.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1269, 17, '2', 'Giải trí', '10.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1270, 17, '2', 'Du lịch', '1.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1271, 17, '2', 'Sức khỏe', '33.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1272, 17, '2', 'Tặng quà', '73.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1273, 17, '2', 'Gia đình', '26.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1274, 17, '2', 'Giáo dục', '62.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1275, 17, '2', 'Đầu tư', '32.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1276, 17, '2', 'Bảo hiểm', '34.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17'),
+(1277, 17, '2', 'Khoản chi khác', '74.png', '2016-06-10 11:17:17', '2016-06-10 11:17:17');
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,8 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `transactions` (
   `id` int(10) UNSIGNED NOT NULL,
-  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(255) NOT NULL,
+  `typeGroup` int(11) NOT NULL,
   `totalMoney` int(11) NOT NULL,
   `date` date NOT NULL,
   `note` text COLLATE utf8_unicode_ci NOT NULL,
@@ -288,8 +289,11 @@ CREATE TABLE `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`id`, `type`, `totalMoney`, `date`, `note`, `user_id`, `wallet_id`, `created_at`, `updated_at`) VALUES
-(8, 'Sức khỏe', 20000, '2016-05-14', 'Không có gì', 15, 6, '2016-05-12 13:31:49', '2016-05-12 13:31:49');
+INSERT INTO `transactions` (`id`, `type`, `typeGroup`, `totalMoney`, `date`, `note`, `user_id`, `wallet_id`, `created_at`, `updated_at`) VALUES
+(23, 1270, 2, 1000000, '2016-06-24', '', 17, 9, '2016-06-10 11:19:12', '2016-06-10 11:19:12'),
+(22, 1261, 1, 2000000, '2016-06-30', '', 17, 9, '2016-06-10 11:18:49', '2016-06-10 11:18:49'),
+(21, 1271, 2, 20000, '2016-06-25', '', 17, 10, '2016-06-10 11:18:35', '2016-06-10 11:18:35'),
+(20, 1263, 1, 20000, '2016-06-17', '', 17, 9, '2016-06-10 11:18:21', '2016-06-10 11:18:21');
 
 -- --------------------------------------------------------
 
@@ -315,7 +319,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `sex`, `currency`, `remember_token`, `created_at`, `updated_at`) VALUES
-(15, 'Anavel', 'donglq_58@vnu.edu.vn', '$2y$10$oDl.g9sVDbU1nvvNHBIDluyUOJgqB04kHW4Dxigme4mOeIJzXRvcG', '', 1, 'vnd', NULL, '2016-05-12 12:28:23', '2016-05-12 12:28:26');
+(17, 'Anavel', 'shiningstar193@gmail.com', '$2y$10$cUBOIf3eWKrj3skK4YIhkOAz4cLDwzLm8VEGbglI/Tg0C77eksZu6', '', 1, 'dollar', NULL, '2016-06-10 11:17:14', '2016-06-10 11:17:17');
 
 -- --------------------------------------------------------
 
@@ -326,6 +330,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `sex`, `currency
 CREATE TABLE `wallets` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `total` int(11) NOT NULL DEFAULT '0',
   `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -336,9 +341,9 @@ CREATE TABLE `wallets` (
 -- Dumping data for table `wallets`
 --
 
-INSERT INTO `wallets` (`id`, `name`, `icon`, `user_id`, `created_at`, `updated_at`) VALUES
-(5, 'Tiền mặt', '44.png', 15, '2016-05-12 12:28:26', '2016-05-12 12:28:26'),
-(6, 'TK Ngân Hàng', '3.png', 15, '2016-05-12 12:28:26', '2016-05-12 12:28:26');
+INSERT INTO `wallets` (`id`, `name`, `total`, `icon`, `user_id`, `created_at`, `updated_at`) VALUES
+(9, 'Tiền mặt', 1020000, '44.png', 17, '2016-06-10 11:17:17', '2016-06-10 11:19:12'),
+(10, 'TK Ngân Hàng', -20000, '3.png', 17, '2016-06-10 11:17:17', '2016-06-10 11:18:35');
 
 --
 -- Indexes for dumped tables
@@ -413,7 +418,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1239;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1278;
 --
 -- AUTO_INCREMENT for table `default_categories`
 --
@@ -433,17 +438,17 @@ ALTER TABLE `icons`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `wallets`
 --
 ALTER TABLE `wallets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
